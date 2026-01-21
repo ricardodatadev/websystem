@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using DotNetEnv;
 using System;
 
 namespace MyProject.Data
@@ -8,6 +9,8 @@ namespace MyProject.Data
     {
         public MyProjectContext CreateDbContext(string[] args)
         {
+
+      
             // Lê obrigatoriamente do .env
             var server = Environment.GetEnvironmentVariable("MYSQL_HOST")
                          ?? throw new InvalidOperationException("MYSQL_HOST não definido");
