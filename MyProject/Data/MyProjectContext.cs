@@ -14,6 +14,8 @@ namespace MyProject.Data
         {
         }
 
-        public DbSet<MyProject.Models.Department> Department { get; set; } = default!;
+        public DbSet<Department> Department { get; set; } 
+        public DbSet<Seller> Seller { get; set;}
+        public DbSet<SalesRecord> SalesREcord { get; set; }
     }
 }

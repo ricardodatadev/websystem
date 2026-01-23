@@ -10,6 +10,7 @@ namespace MyProject.Data
         public MyProjectContext CreateDbContext(string[] args)
         {
 
+            Env.Load();
       
             // Lê obrigatoriamente do .env
             var server = Environment.GetEnvironmentVariable("MYSQL_HOST")
