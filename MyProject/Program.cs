@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using System;
 using MyProject.Data;
+using MyProject.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +14,7 @@ builder.Services.AddDbContext<MyProjectContext>(options =>
         )
     )
 );
-
+builder.Services.AddScoped<SellerService>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
