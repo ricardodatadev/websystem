@@ -6,11 +6,13 @@ namespace MyProject.Models
 {
     public class Seller
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
         public double BaseSalary { get; set; }
         public DateTime BirthDate { get; set; }
+
+        public int DepartmentId { get; set; }
 
         public Department Department { get; set; }
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
@@ -19,7 +21,7 @@ namespace MyProject.Models
 
         public Seller(int id, string name, string email, double baseSalary, DateTime birthDate)
         {
-            this.id = id;
+            Id = id;
             Name = name;
             Email = email;
             BaseSalary = baseSalary;
